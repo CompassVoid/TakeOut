@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+  --brand: #2563eb;
+  --brand-strong: #1d4ed8;
+  --brand-soft: #e5edff;
+  --text-main: #0f172a;
+  --text-sub: #475569;
+  --panel: rgba(255, 255, 255, 0.9);
+  --line: #e2e8f0;
+  --shadow: 0 18px 45px rgba(15, 23, 42, 0.12);
+  --radius: 14px;
+  --gap: 18px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Inter', 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  color: var(--text-main);
+  background: radial-gradient(circle at 20% 20%, rgba(37, 99, 235, 0.12), transparent 30%),
+    radial-gradient(circle at 80% 0%, rgba(79, 70, 229, 0.14), transparent 25%),
+    #f6f8fd;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+}
+
+a {
+  color: var(--brand);
+  text-decoration: none;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+a:hover {
+  color: var(--brand-strong);
+  opacity: 0.9;
+}
+
+.app-shell {
+  min-height: 100vh;
+  padding: 24px 28px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.86));
+}
+
+.page-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 12px;
+}
+
+.page-subtitle {
+  color: var(--text-sub);
+  margin-bottom: 18px;
+}
+
+.stat-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--gap);
+}
+
+.stat-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 8px;
+}
+
+.stat-card .label {
+  color: var(--text-sub);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.stat-card .value {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.stat-card .trend {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--brand-soft);
+  color: var(--brand-strong);
+  font-weight: 600;
+}
+
+.glass-panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(6px);
+}
+
+.page-section {
+  margin-bottom: 20px;
+}
+
+.fade-in {
+  animation: fade-in 320ms ease forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

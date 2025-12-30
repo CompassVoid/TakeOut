@@ -1,0 +1,17 @@
+/* Element UI 主题定制：更现代的配色与圆角 */
+$--color-primary: #2563eb !default;
+$--color-success: #16a34a !default;
+$--color-warning: #f59e0b !default;
+$--color-danger: #ef4444 !default;
+$--color-info: #6b7280 !default;
+
+$--border-radius-base: 10px !default;
+$--button-padding-vertical: 10px !default;
+$--button-padding-horizontal: 18px !default;
+$--button-border-radius: 10px !default;
+$--input-border-radius: 10px !default;
+$--box-shadow-light: 0 12px 30px rgba(15, 23, 42, 0.12) !default;
+
+/* 必需：icon 字体路径 */
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+@import "~element-ui/packages/theme-chalk/src/index";
